@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. Basic syntax and Data types
+      console.log("Hello JAVASCRIPT!");
+      // 2. Variable declaration
+      let a = "hello";
+      let b = 10;
+      let c = true;
+      let d;
+      let e = null;
+      console.log(a, b, c, d, e);
+      // 3.Type conversion
+      let str = "123";
+      let num = 456;
+
+      let strToNum = Number(str);
+      let numToStr = String(num);
+
+      console.log(strToNum, typeof strToNum);
+      console.log(numToStr, typeof numToStr);
+      // 4. Operators and expressions
+
+      function numra(num1, num2) {
+        plus = num1 + num2;
+        minus = num1 - num2;
+        shumzim = num1 * num2;
+        pjestimi = num1 / num2;
+        perpjesrimi = num1 % num2;
+      }
+      let result = numra(10, 5);
+      console.log(plus, minus, shumzim, pjestimi, perpjesrimi);
+      //5.even or odd
+      let num3 = 8;
+      console.log(num3 % 2 == 0 ? "even" : "odd");
+      //6.comperasion operators
+      function numra2(num1, num2) {
+        result1 = num1 > num2;
+        result2 = num1 < num2;
+        result3 = num1 >= num2;
+        result4 = num1 <= num2;
+        result5 = num1 == num2;
+        result6 = num1 != num2;
+        result7 = num1 === num2;
+        result8 = num1 !== num2;
+      }
+      let resul = numra2(10, 5);
+      console.log(
+        result1,
+        result2,
+        result3,
+        result4,
+        result5,
+        result6,
+        result7,
+        result8
+      );
+      //7.control flow
+      let num4 = 76;
+      if (num4 >= 90) console.log("A");
+      else if (num4 >= 80) {
+        console.log("B");
+      } else if (num4 >= 70) {
+        console.log("C");
+      } else if (num4 >= 60) {
+        console.log("D");
+      } else {
+        console.log("F");
+      }
+      //8.fizzbuzz
+      function fizzbuzz(num5) {
+        if (num5 % 3 == 0 && num5 % 5 == 0) {
+          console.log("fizzbuzz");
+        } else if (num5 % 3 == 0) {
+          console.log("fizz");
+        } else if (num5 % 5 == 0) {
+          console.log("buzz");
+        } else {
+          console.log(num5);
+        }
+      }
+      for (let i = 1; i <= 100; i++) {
+        fizzbuzz(i);
+      }
+      //9 password validation
+      function validatePassword(password) {
+        let isValid = password.length >= 8 && /\d/.test(password);
+        console.log(isValid ? "Valid password" : "Invalid password");
+      }
+
+      validatePassword("0123321456");
+      validatePassword("bol1otr1");
+      validatePassword("lori123");
+
+      //10.greetin function
+      function greet(name) {
+        console.log(`Hello , ${name}!`);
+      }
+
+      greet("Alice");
+      greet("Bob");
+      //11.factorial calculation
+      function factorial(n) {
+        if (n === 0 || n === 1) {
+          return 1;
+        }
+        return n * factorial(n - 1);
+      }
+
+      console.log(factorial(5));
+      console.log(factorial(7));
+      //12. palindrome check
+      function isPalindrome(str) {
+        let reversed = str.split("").reverse().join("");
+        console.log(str === reversed ? "Palindrome" : "Not Palindrome");
+      }
+      isPalindrome("madam");
+      //13. array
+      function sumArray(arr) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+          sum += arr[i];
+        }
+        return sum;
+      }
+
+      let numbers = [1, 2, 3, 4, 5];
+      console.log(sumArray(numbers));
+      //14. find max
+      function findMax(arr) {
+        let max = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+          if (arr[i] > max) {
+            max = arr[i];
+          }
+        }
+        return max;
+      }
+
+      console.log(findMax([1, 11, 5, 7, 4]));
+      //15. filter even numbers
+      function filterEven(arr) {
+        let evenNumbers = [];
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 === 0) {
+            evenNumbers.push(arr[i]);
+          }
+        }
+        return evenNumbers;
+      }
+      console.log(filterEven([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+      //16.object
+      //16.1 object properties
+      let person = {
+        name: "frenklin",
+        age: 24,
+        hobibies: "basketball",
+      };
+      console.log(person);
+      console.log(person.name, person.age, person.hobibies);
+      //16.2 object methods
+      console.log(
+        "hi,I`m " + person.name + " and I am " + person.age + " years old!"
+      );
+      //16.3 shopping cart
+      let shoppingCart = [
+        { name: "molle", price: 1.5, quantity: 4 },
+        { name: "banane", price: 0.5, quantity: 6 },
+        { name: "portokall", price: 1.0, quantity: 3 },
+      ];
+      function calculateTotalCost(cart) {
+        let totalCost = 0;
+        for (let i = 0; i < cart.length; i++) {
+          totalCost += cart[i].price * cart[i].quantity;
+        }
+        return totalCost;
+      }
+
+      console.log("Total Cost: $" + calculateTotalCost(shoppingCart));
+    </script>
+  </body>
+</html>
