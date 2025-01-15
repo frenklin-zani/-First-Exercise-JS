@@ -187,4 +187,4 @@ function calculateTotalCost(cart) {
   return totalCost;
 }
 
-console.log("Total Cost: $" + calculateTotalCost(shoppingCart));
+console.log("Total Cost=$ " + calculateTotalCost(shoppingCart));
