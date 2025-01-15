@@ -18,15 +18,14 @@ console.log(strToNum, typeof strToNum);
 console.log(numToStr, typeof numToStr);
 // 4. Operators and expressions
 
-function numra(num1, num2) {
-  let plus = num1 + num2;
-  let minus = num1 - num2;
-  let shumzim = num1 * num2;
-  let pjestimi = num1 / num2;
-  let perpjesrimi = num1 % num2;
-}
-let result = numra(10, 5);
-console.log(plus, minus, shumzim, pjestimi, perpjesrimi);
+let num1 = 10;
+let num2 = 5;
+let plus = num1 + num2;
+let minus = num1 - num2;
+let shumezim = num1 * num2;
+let pjestim = num1 / num2;
+let perpjestim = num1 % num2;
+console.log(plus, minus, shumezim, pjestim, perpjestim);
 //5.even or odd
 let num3 = 8;
 if (num3 % 2 === 0) {
