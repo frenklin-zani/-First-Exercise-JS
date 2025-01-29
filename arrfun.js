@@ -28,14 +28,23 @@ function squared(arr) {
 console.log(squared([1, 2, 3, 4, 5]));
 
 function filter(arr) {
-  string = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].length > 5) {
-      string.push(arr[i]);
-    }
-  }
-  return string;
+  return arr.filter((item) => item.length > 5);
 }
 console.log(
-  filter(["apple", "banana", "kiwi", "orange", "grapes", "mango", "pineapple"])
+  filter([
+    "apple",
+    "banana",
+    "mango",
+    "kiwi",
+    "grapes",
+    "orange",
+    "pineapple",
+    "strawberry",
+    "watermelon",
+    "papaya",
+  ])
 );
+function temperatura(arr) {
+  return arr.map((item) => (item * 9) / 5 + 32);
+}
+console.log(temperatura([0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]));
