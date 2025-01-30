@@ -12,7 +12,7 @@ function isPrime(n) {
   return true;
 }
 
-console.log(isPrime(13));
+console.log(isPrime(121));
 console.log(isPrime(24));
 
 function longestWord(arr) {
